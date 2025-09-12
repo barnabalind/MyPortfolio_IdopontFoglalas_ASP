@@ -1,0 +1,50 @@
+﻿@model List<IdopontFoglalas.Models.Foglalas>
+
+@{
+    ViewData["Title"] = "Időpontfoglalás";
+}
+
+<h2>Foglalások!</h2>
+@if (TempData["Uzenet"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Uzenet"]
+    </div>
+}
+
+@if(Model.Count !=0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Életkor</th>
+                <th>Foglalás létrehozva</th>
+                <th>Foglalt időpont</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var foglalo in Model)
+            {
+                <tr>
+                    <td>@foglalo.FoglaloNev</td>
+                    <td>@foglalo.Eletkor</td>
+                    <td>@foglalo.LetrehozasIdopont.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@foglalo.FoglalasIdopont.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        <a asp-action="Torles" asp-route-id="@foglalo.Id" class="btn btn-danger btn-sm"
+                           onclick="return confirm('Biztosan törölni szeretné ezt a foglalást?');">Törlés</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="UjFoglalas" class="btn btn-outline-success">Új foglalás hozzáadása</a>
+
+}
+else
+{
+    <p>Még nincsenek foglalások. Hozzon létre a <a href="/Home/UjFoglalas">Foglalás</a> menüpont alatt.</p>
+}
+

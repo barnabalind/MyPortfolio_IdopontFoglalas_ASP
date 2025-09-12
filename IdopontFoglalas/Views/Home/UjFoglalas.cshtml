@@ -1,0 +1,32 @@
+﻿@model IdopontFoglalas.Models.Foglalas
+@{
+	ViewData["Title"] = "Foglalás";
+}
+
+<h2>Új foglalás létrehozása!</h2>
+@if (ViewBag.Hiba != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Hiba
+    </div>
+}
+
+<form method="post" asp-action="UjFoglalas">
+    <div class="form-group mb-3">
+        <label for="FoglaloNev">Név</label>
+        <input asp-for="FoglaloNev" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="Eletkor">Életkor</label>
+        <input asp-for="Eletkor" class="form-control" type="number" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="FoglalasIdopont">Foglalás időpontja</label>
+        <input asp-for="FoglalasIdopont" class="form-control" type="datetime-local" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Mentés</button>
+
+</form>

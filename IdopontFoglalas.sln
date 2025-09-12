@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdopontFoglalas", "IdopontFoglalas\IdopontFoglalas.csproj", "{B3CAB930-CE4C-44D2-B09D-C4EB3160EA78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3CAB930-CE4C-44D2-B09D-C4EB3160EA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3CAB930-CE4C-44D2-B09D-C4EB3160EA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3CAB930-CE4C-44D2-B09D-C4EB3160EA78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3CAB930-CE4C-44D2-B09D-C4EB3160EA78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BF35C87-E471-43BD-A47D-6D399D33099B}
+	EndGlobalSection
+EndGlobal
